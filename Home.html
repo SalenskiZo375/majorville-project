@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majorville</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) ;
+            grid-template-rows:auto auto 1fr auto;
+            grid-template-areas:
+            "header  header   header" 
+            "nav     nav      nav"
+            "main    main     aside"
+            "footer  footer   footer";
+        }
+
+        nav {
+            grid-area: nav;
+            width: 100%;
+            background-color: red;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        nav img {
+            float: left;
+            height: 250px;
+            
+        }
+
+        body {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+
+        main {
+            grid-area: main;
+            /* font-size: 30px; */
+        }
+
+        main ul {
+            list-style-type: none;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        @media (width < 400px) {
+            .container {
+                grid-template-areas: 
+                "nav nav"
+                "main main"
+                "aside aside"
+                "footer footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <img src="Majorville Summer Solstice Logo.png" alt="Majorville Summer Solstice Logo">
+
+        </header>
+        
+        
+        <nav>
+            
+            <a href="Home.html">Home</a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="events.html">Events</a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="history.html">History</a>
+        </nav>
+   
+
+  
+        <main>
+            <h2>Majorville's Summer Solstice Is Here!</h2>
+            
+            
+            <ul>
+                <li>Who: Chamber of Commerce in Majorville, Michigan</li>
+                <li>What: Summer Solstice Festival</li>
+                <li>Where: Woodward Farm in Majorville, MI</li>
+                <li>When: Thursday, June 20, 2024 from 11am-10pm</li>
+            </ul>
+        </main>
+      
+
+    
+        <aside>
+            <p>This is a festival designed to highlight our town and what it has to offer the general public, so costumes are encouraged! Let your kiddos get dressed up as a lumberjack, pioneer, or summer solstice sprite.
+
+                The local baseball team, the Majorville Lumberjacks, will host an exhibition game.
+                </p>
+        </aside>
+
+        <footer>
+
+        </footer>
+        <!-- End of container DIV -->
+    </div>
+</body>
+</html>
