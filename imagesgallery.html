@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majorville</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr) ; */
+            grid-template-rows:auto auto 1fr auto;
+            grid-template-areas:
+            "header  header   header" 
+            "div    div     div"
+            "footer  footer   footer";
+
+            gap: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: rgb(110, 164, 123);
+            height: 325px;
+            padding: 20px;
+        }
+
+        
+
+        main div img {
+            height: 400px;
+            float: right;
+        }
+        
+
+
+        header img {
+            height: 200px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 10px;
+        }
+
+        header h1 {
+            
+            text-align: center;
+            
+        }
+
+        .topnav {
+            background-color: rgb(204, 239, 151);
+            overflow: hidden;
+            text-align: center;
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+
+        .topnav a {
+            float: left;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 14px 16px ;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: rgb(216, 251, 201);
+            color: black;
+            text-align: center;
+        }
+
+        .topnav a.active {
+            background-color: rgb(54, 131, 3);
+            color: rgb(245, 244, 244);
+            text-align: center;
+        }
+
+        body {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        main ul {
+            list-style-type: none;
+        }
+
+        div div img {
+            grid-area: image;
+            padding-top: 20px;
+            padding-left: 20px;
+            width: 100%;
+            max-width: 500px;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        .row {
+            
+            display: grid;
+
+            grid-template-areas: 
+            "image image image image image image image";
+            
+            gap: 10px;
+
+        }
+
+        /* .column {
+            
+            flex: 100%;
+            max-width: 100%;
+            padding: 0px 4px;
+        } */
+
+        /* main img {
+            height: 400px;
+        
+            padding-right: 200px;
+            padding-top: 40px;
+        } */
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        aside {
+            grid-area: aside;
+            
+        }
+
+        footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            height: 30px;
+            width: 100%;
+            background-color: blue;
+            text-align: center;
+        }
+
+        @media (width < 560px) {
+            .container {
+                grid-template-areas: 
+                "header header"
+                "image image"
+                "image image"
+                "image image"
+                "footer footer";
+
+                grid-template-columns: auto;
+                grid-template-rows: auto 1fr auto;
+            }
+
+            header {
+                width: 92%;
+                height: 360px;
+            }
+
+            div div img {
+                grid-area: image;
+                padding-top: 20px;
+                padding-left: 40px;
+                width: 100%;
+                max-width: 500px;
+                height: 80%;
+                object-fit: cover;
+            }
+
+            .row {
+            
+            display: grid;
+
+            grid-template-areas: 
+            "image image"
+            "image image"
+            "image image";
+            
+            gap: 10px;
+
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            
+            <img src="Majorville Summer Solstice Logo.png" alt="Majorville Summer Solstice Logo" class="center ">
+            <h1 >Majorville Summer Solstice</h1>
+
+            <div class="topnav">
+                <a href="Home.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="history.html">History</a>
+                <a class="active" href="imagesgallery.html">Images</a>
+            </div>
+        </header>
+        
+        <div class="row center">
+            <div><img src="farm 1.jpg" alt="farm with sun"></div>
+            <div><img src="farm 2.jpg" alt="man with horses"></div>
+            <div><img src="lake 1.jpg" alt=" boat on lake michigan"></div>
+            <div><img src="lake 2.jpg" alt="lake michigan sand dunes"></div>
+            <div><img src="band 1.jpg" alt="breathe owl breathe performing"></div>
+            <div><img src="farm 3.jpg" alt="high view of a farm"></div>
+            <div><img src="farm 4.jpg" alt=" some flowers"></div>
+            <div><img src="farm 5.jpg" alt="wind mill"></div>
+            <div><img src="farm 6.jpg" alt="form house"></div>
+            <div><img src="lake 3.jpg" alt="lake michigan"></div>
+            <div><img src="farm 7.jpg" alt="farm tool"></div>
+            <div><img src="lake 8.jpg" alt="barn"></div>
+            <div><img src="lake 4.jpg" alt="lake michigan mad"></div>
+            <div><img src="lake 6.jpg" alt="seagulls"></div>
+        </div>
+
+        <footer>
+            <small>&copy; Copyright 2024, Majorville Community</small> 
+        </footer>
+        <!-- End of container DIV -->
+    </div>
+</body>
+</html>
