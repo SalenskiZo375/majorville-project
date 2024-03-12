@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majorville</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) ;
+            grid-template-rows:auto auto 1fr auto;
+            grid-template-areas:
+            "header  header   header" 
+            "main    image     aside"
+            "footer  footer   footer";
+
+            gap: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: blue;
+            height: 325px;
+            padding: 20px;
+        }
+
+        
+
+        main div img {
+            height: 400px;
+            float: right;
+        }
+        
+
+
+        header img {
+            height: 200px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 10px;
+        }
+
+        header h1 {
+            
+            text-align: center;
+            
+        }
+
+        .topnav {
+            background-color: tan;
+            overflow: hidden;
+            text-align: center;
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+
+        .topnav a {
+            float: left;
+            color: rgb(103, 94, 79);
+            text-align: center;
+            padding: 14px 16px ;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+
+        .topnav a.active {
+            background-color: rgb(152, 128, 90);
+            color: black;
+            text-align: center;
+        }
+
+        body {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        div img {
+            grid-area: image;
+            padding-top: 30px;
+            padding-left: 70px;
+        }
+
+
+        div img {
+            grid-area: image;
+            padding-top: 30px;
+        }
+
+        
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        aside {
+            grid-area: aside;
+            
+        }
+
+        footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            height: 30px;
+            width: 100%;
+            background-color: blue;
+            text-align: center;
+        }
+
+        @media (width < 560px) {
+            .container {
+                grid-template-areas: 
+                "header header"
+                "main main"
+                "image image"
+                "aside aside"
+                "footer footer";
+
+                grid-template-columns: auto;
+                grid-template-rows: repeat(5, auto);
+            }
+
+            header {
+                width: 92%;
+                height: 360px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            
+            <img src="Majorville Summer Solstice Logo.png" alt="Majorville Summer Solstice Logo" class="center ">
+            <h1 >Majorville Summer Solstice</h1>
+
+            <div class="topnav">
+                <a href="Home.html">Home</a>
+                <a href="events.html">Events</a>
+                <a class="active" href="history.html">History</a>
+                <a href="imagesgallery.html">Images</a>
+            </div>
+        </header>
+        
+        <div>
+            <img src="lake michigan.jpg" alt="lake michigan" class="responsive">
+        </div>
+
+  
+        <main >
+
+            
+            
+            
+
+        
+            <h2>Some History Of Majorville</h2>
+            
+            
+            <p>Majorville is located on Lake Michigan where Pine Creek empties into Lake Michigan just south of Esky Road.  
+
+                Today this is one of the most popular swimming beaches in the Lakeshore, but in the 1870s and 1880s, Majorville was a booming lumber town!
+                <br>
+                <br>
+                Following the U. S. Civil War, the veterans returned home, and John Major settled  in Northern Michigan.Major cleared 20 acres and built a log cabin. Then he planted some black locust trees and an apple orchard around the cabin. 
+                <br>
+                <br>
+                Lumber speculators soon arrived looking for stands of white pine. Most of the forest in this area was hardwood.Lumber speculators were on their way north as the forests near Grand Haven and Muskegon were harvested.
+                </p>
+            
+
+            
+        </main>
+      
+
+    
+        <aside>
+            <p>Dr. Arthur O’Learyrecognized the financial potential of the timber stands around Pine Creek. He began buying up large tracts of forest and made plans to build a sawmill.The sawmill was built on the south side of Pine Creek not far from Lake Michigan.
+            <br>
+            <br>
+            Mill operation began in 1869 for the purpose of producing white pine lumber, and the town of Majorville was established.
+            </p>
+        </aside>
+
+        <footer>
+            <small>&copy; Copyright 2024, Majorville Community</small> 
+        </footer>
+        <!-- End of container DIV -->
+    </div>
+</body>
+</html>

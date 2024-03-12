@@ -11,7 +11,7 @@
             grid-template-rows:auto auto 1fr auto;
             grid-template-areas:
             "header  header   header" 
-            "main    main     aside"
+            "main    image     aside"
             "footer  footer   footer";
 
             gap: 10px;
@@ -87,21 +87,29 @@
 
         main {
             grid-area: main;
-            
         }
 
         main ul {
             list-style-type: none;
         }
 
-        main img {
-            height: 400px;
-            float: right;
-            padding-right: 200px;
-            padding-top: 40px;
+        div img {
+            grid-area: image;
+            padding-top: 30px;
         }
 
+        /* main img {
+            height: 400px;
         
+            padding-right: 200px;
+            padding-top: 40px;
+        } */
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
 
         aside {
             grid-area: aside;
@@ -109,8 +117,13 @@
         }
 
         footer {
-            background-color: darkblue;
-            
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            height: 30px;
+            width: 100%;
+            background-color: blue;
+            text-align: center;
         }
 
         @media (width < 560px) {
@@ -118,14 +131,20 @@
                 grid-template-areas: 
                 "header header"
                 "main main"
+                "image image"
                 "aside aside"
                 "footer footer";
+
+                grid-template-columns: auto;
+                grid-template-rows: repeat(5, auto);
             }
 
             header {
-                width: 139%;
+                width: 92%;
                 height: 360px;
             }
+
+            
         }
     </style>
 </head>
@@ -141,18 +160,19 @@
                 <a class="active" href="Home.html">Home</a>
                 <a href="events.html">Events</a>
                 <a href="history.html">History</a>
+                <a href="imagesgallery.html">Images</a>
             </div>
         </header>
         
-        
-        
-   
+        <div>
+            <img src="farm house.jpg" alt="farm house" class="responsive">
+        </div>
 
   
         <main >
 
             
-            <img src="farm house.jpg" alt="farm house">
+            
             
 
         
@@ -180,7 +200,7 @@
         </aside>
 
         <footer>
-            <p>&copy; Zoey </p>
+            <small>&copy; Copyright 2024, Majorville Community</small> 
         </footer>
         <!-- End of container DIV -->
     </div>
