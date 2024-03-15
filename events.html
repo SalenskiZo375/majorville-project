@@ -8,12 +8,11 @@
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr) ;
-            grid-template-rows: auto 1fr auto;
+            grid-template-rows:auto auto 1fr auto;
             grid-template-areas:
             "header  header   header" 
             "main    image     aside"
             "footer  footer   footer";
-
             gap: 10px;
         }
 
@@ -22,20 +21,17 @@
             background-color: rgb(110, 164, 123);
             height: 325px;
             padding: 20px;
+            border: 1px solid black;
         }
 
-        
-
-        /* main div img {
+        main div img {
             height: 400px;
             float: right;
-        } */
+        }
         
-
-
         header img {
             height: 200px;
-            
+            padding-right: 70px;
         }
 
         .center {
@@ -46,9 +42,7 @@
         }
 
         header h1 {
-            
             text-align: center;
-            
         }
 
         .topnav {
@@ -57,7 +51,7 @@
             text-align: center;
             margin-left: 20px;
             margin-right: 20px;
-            
+            border: 1px solid black;
         }
 
         .topnav a {
@@ -82,13 +76,12 @@
         }
 
         body {
-            background-color: rgb(235, 255, 213);
-            font-size: 17px;
+            background-color: rgb(233, 255, 206);
+            font-size: 20px;
         }
 
         main {
             grid-area: main;
-            padding-top: 10px;
             padding-left: 10px;
         }
 
@@ -96,8 +89,8 @@
 
         div img {
             grid-area: image;
-            padding-top: 40px;
-            padding-left: 5px;
+            padding-top: 30px;
+            padding-left: 70px;
         }
 
         div p {
@@ -113,7 +106,6 @@
 
         aside {
             grid-area: aside;
-            padding-top: 10px;
             
         }
 
@@ -127,8 +119,9 @@
             bottom: 0px;
             height: 30px;
             width: 100%;
-            background-color: blue;
+            background-color: rgb(110, 164, 123);
             text-align: center;
+            border-top: 1px solid black;
         }
 
         @media (width < 560px) {
@@ -139,9 +132,8 @@
                 "image image"
                 "aside aside"
                 "footer footer";
-
                 grid-template-columns: auto;
-                grid-template-rows: repeat(6, auto);
+                grid-template-rows: repeat(5, auto);
             }
 
             header {
@@ -149,7 +141,14 @@
                 height: 360px;
             }
 
-            
+            aside {
+                padding-bottom: 30px;
+                padding-left: 10px;
+            }
+
+            main {
+                padding-top: 10px;
+            }
         }
     </style>
 </head>
@@ -157,18 +156,15 @@
     <div class="container">
         
         <header>
-            
-            <img src="Majorville Summer Solstice Logo.png" alt="Majorville Summer Solstice Logo" class="center"><br>
+            <img src="Majorville Summer Solstice Logo.png" alt="Majorville Summer Solstice Logo" class="center ">
             <h1 >Majorville Summer Solstice</h1>
-        
-   
+
             <div class="topnav">
                 <a href="index.html">Home</a>
                 <a class="active" href="events.html">Events</a>
                 <a href="history.html">History</a>
                 <a href="imagesgallery.html">Images</a>
             </div>
-       
         </header>
         
         <div>
@@ -178,15 +174,8 @@
         </div>
 
   
-        <main >
-
-            
-            
-            
-
-        
+        <main>
             <h2>Some Events for This Years Solstice</h2>
-            
             
             <ul>
                 <li>Live Music by Breathe Owl Breathe</li>
@@ -207,16 +196,10 @@
                 <li>Lumberjack Competitions: chopping, sawing, and speed pole climbing</li>
                 <li>Blacksmithing demonstration by Dan Nickels</li>
                 <li>Enjoy lemonade , lemonade slushies, ice cream, and other goodies from our local vendors. We will also have food trucks on-site for you to enjoy during our celebration.</li>
-            </ul>
-            
-
-            
+            </ul> 
         </main>
       
-
-    
         <aside>
-
             <h1>The Food Selection</h1>
 
             <ul>
