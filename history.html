@@ -35,6 +35,7 @@
 
         header img {
             height: 200px;
+            padding-right: 70px;
         }
 
         .center {
@@ -81,12 +82,13 @@
         }
 
         body {
-            background-color: blueviolet;
+            background-color: rgb(233, 255, 206);
             font-size: 20px;
         }
 
         main {
             grid-area: main;
+            padding-left: 10px;
         }
 
         div img {
@@ -111,7 +113,7 @@
 
         aside {
             grid-area: aside;
-            
+            padding-right: 90px;
         }
 
         footer {
@@ -120,8 +122,9 @@
             bottom: 0px;
             height: 30px;
             width: 100%;
-            background-color: blue;
+            background-color: rgb(110, 164, 123);
             text-align: center;
+            border-top: 1px solid black;
         }
 
         @media (width < 560px) {
@@ -141,8 +144,13 @@
                 width: 92%;
                 height: 360px;
             }
-
             
+
+            aside {
+                padding-left: 10px;
+                padding-bottom: 30px;
+                padding-right: 0px;
+            }
         }
     </style>
 </head>
@@ -155,7 +163,7 @@
             <h1 >Majorville Summer Solstice</h1>
 
             <div class="topnav">
-                <a href="Home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="events.html">Events</a>
                 <a class="active" href="history.html">History</a>
                 <a href="imagesgallery.html">Images</a>
