@@ -8,12 +8,11 @@
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr) ;
-            grid-template-rows: auto 1fr auto;
+            grid-template-rows:auto auto 1fr auto;
             grid-template-areas:
             "header  header   header" 
             "main    image     aside"
             "footer  footer   footer";
-
             gap: 10px;
         }
 
@@ -22,19 +21,17 @@
             background-color: rgb(110, 164, 123);
             height: 325px;
             padding: 20px;
+            border: 1px solid black;
         }
-
-        
 
         main div img {
             height: 400px;
             float: right;
         }
         
-
-
         header img {
             height: 200px;
+            padding-right: 70px;
         }
 
         .center {
@@ -45,9 +42,7 @@
         }
 
         header h1 {
-            
             text-align: center;
-            
         }
 
         .topnav {
@@ -56,7 +51,6 @@
             text-align: center;
             margin-left: 20px;
             margin-right: 20px;
-            margin-top: 42px;
             border: 1px solid black;
         }
 
@@ -82,34 +76,26 @@
         }
 
         body {
-            background-color: rgb(235, 255, 213);
-            font-size: 17px;
+            background-color: rgb(233, 255, 206);
+            font-size: 20px;
         }
 
         main {
             grid-area: main;
-        }
-
-        div img {
-            grid-area: image;
-            padding-top: 30px;
             padding-left: 10px;
         }
 
+        div img {
+            grid-area: image;
+            padding-top: 30px;
+            padding-left: 70px;
+        }
+
 
         div img {
             grid-area: image;
             padding-top: 30px;
         }
-
-        main img {
-            height: 400px;
-        
-            padding-right: 200px;
-            padding-top: 40px;
-        }
-
-        
 
         .responsive {
             width: 100%;
@@ -119,7 +105,7 @@
 
         aside {
             grid-area: aside;
-            
+            padding-right: 90px;
         }
 
         footer {
@@ -128,8 +114,9 @@
             bottom: 0px;
             height: 30px;
             width: 100%;
-            background-color: blue;
+            background-color: rgb(110, 164, 123);
             text-align: center;
+            border-top: 1px solid black;
         }
 
         @media (width < 560px) {
@@ -140,7 +127,6 @@
                 "image image"
                 "aside aside"
                 "footer footer";
-
                 grid-template-columns: auto;
                 grid-template-rows: repeat(5, auto);
             }
@@ -150,7 +136,11 @@
                 height: 360px;
             }
 
-            
+            aside {
+                padding-left: 10px;
+                padding-bottom: 30px;
+                padding-right: 0px;
+            }
         }
     </style>
 </head>
@@ -158,7 +148,6 @@
     <div class="container">
         
         <header>
-            
             <img src="Majorville Summer Solstice Logo.png" alt="Majorville Summer Solstice Logo" class="center ">
             <h1 >Majorville Summer Solstice</h1>
 
@@ -176,12 +165,6 @@
 
   
         <main >
-
-            
-            
-            
-
-        
             <h2>Some History Of Majorville</h2>
             
             
@@ -195,13 +178,8 @@
                 <br>
                 Lumber speculators soon arrived looking for stands of white pine. Most of the forest in this area was hardwood.Lumber speculators were on their way north as the forests near Grand Haven and Muskegon were harvested.
                 </p>
-            
-
-            
         </main>
       
-
-    
         <aside>
             <p>Dr. Arthur O’Learyrecognized the financial potential of the timber stands around Pine Creek. He began buying up large tracts of forest and made plans to build a sawmill.The sawmill was built on the south side of Pine Creek not far from Lake Michigan.
             <br>
